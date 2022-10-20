@@ -2,11 +2,11 @@
 
 ###### Développé par: `Jeannette David`
  
-> :arrow_right: Présentation du projet : 
-<br>
+> :arrow_right: Présentation du projet :+1: 
+### Sommaire :
+[ToC]
 
-
-# :memo: Compétences de l'examen :
+# :memo: Compétences de l'examen
 
 
 ### Activité – Type 1 : Développer la partie front-end d’une application web ou web mobile en intégrant les recommandations de sécurité
@@ -28,7 +28,7 @@
 
 
 
-# :bookmark_tabs:   Application  : 
+# Application  : :notebook: 
 ### -Description :
 
 L’application est une grande marque de salle de sport qui souhaite la création d’une 
@@ -40,34 +40,13 @@ L’interface sera utilisée par l’équipe technique de développement de la m
 
 
 
-# Analyses et Choix techniques : :rocket: 
-
-### - Les Langages utilisés :<br>
--PHP -HTML -CSS -JAVASCRIPT 
-
-### - Framework : 
-LARAVEL , Boostrap , Ionic , Summernote, ADMINLTE
-
-### - Librairie :
-JQuery , Font Awesome , IchekBootstrap , Overlayscrollbars
-
-### - Plugin : 
-DataTable
+# Analyses et Choix techniques :eyeglasses: 
+:::info
+:pushpin: Documentation sur les technologies utilisés ➜ [Cliquez-ici](https://hackmd.io/c/tutorials) 
+:::
 
 ---
-
-# :closed_lock_with_key: Sécurité  : 
-L'application possède une multitude d'option de sécurté :+1: <br>
-Celle-ci comprends,une protection contre les :<br>
-- <b>Injection SQL</b>
-- <b>Failes XSS </b> <br>
-
-L'appication web est également protégé vis à vis des formulaires vide. <b>Des messages d'erreurs</b> seront affichés au cas ou l'utilisateur ne saisi pas correctement les formulaires. <br>
-
-### Utilisation des $session et Protection CSRF
-En effet le $session est utilisé dans l'appication afin de bien authentifier l'utilisateur. Afin de garentir l'aspect sécurté de connexion et d'utilisation une protection supplémentaire CSRF permettra à l'utilisateur de sécuriser ses actions et sa connexion sur son compte. Cela protège aussi contre une attaque de type « Man-In-The-Middle » qui est possible sous HTTPS lors de l’utilisation d’une valeur secrète indépendante de la session.
-
-# :computer:  Déploiment de l'application en Local
+# Déploiment de l'application en Local :lock_with_ink_pen: 
 
 - Veuillez installer la Base de données <b>user_management</b> dans votre serveur web local mysql. Puis Importer la Base de données 
 -  Changer le fichier <b>.env</b> avec vos données : ligne  8 à 13.
@@ -93,7 +72,7 @@ ou
 - Vous voici arriver devant l'interface de connexion : 
 image ....
 
-# :paperclip: Annexes :
+# -Annexes
 à Venir...
 
 ---
