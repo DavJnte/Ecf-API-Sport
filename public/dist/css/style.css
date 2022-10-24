@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Bozart;
+    src: url('{{ asset("fonts/BOZART.ttf") }}') format('truetype');
+}
+
+@font-face {
+    font-family: Dosis;
+    src: url('{{ asset("fonts/Dosis-VariableFont_wght.ttf") }}') format('truetype');
+}
+
+.text-dosis {
+    font-family: 'Dosis' !important;
+}
+
+body {
+    font-family: 'Dosis' !important;
+}
+
+.text-bigger {
+    font-size: 5rem!important;
+}

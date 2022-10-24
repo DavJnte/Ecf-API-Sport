@@ -103,11 +103,11 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
+          <img src="{{asset('dist/img/AdminLTELogo.png')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <!--Affiche le nom de l'admin-->
         <div class="info">
-          <a href="#" class="d-block">{{ ucfirst(session()->get('admin')->username) }}</a>
+          <a class="d-block">{{ ucfirst(session()->get('admin')->username) }}</a>
         </div>
       </div>
 
@@ -146,12 +146,6 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="/addPermission" class="nav-link">
-                  <i class="fa fa-plus-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li>
-              <li class="nav-item">
                 <a href="/permissions" class="nav-link">
                   <i class="fa fa-list nav-icon"></i>
                   <p>Gérer</p>
@@ -161,19 +155,13 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
+            <i class="fa fa-home nav-icon"></i>
               <p>
                 Franchises
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/addFranchise" class="nav-link">
-                  <i class="fa fa-plus-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li>
               <li class="nav-item">
                 <a href="/franchises" class="nav-link">
                   <i class="fa fa-list nav-icon"></i>
@@ -191,12 +179,6 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="/addStructure" class="nav-link">
-                  <i class="fa fa-plus-circle nav-icon"></i>
-                  <p>Ajouter</p>
-                </a>
-              </li>
               <li class="nav-item">
                 <a href="/structures" class="nav-link">
                   <i class="fa fa-list nav-icon"></i>

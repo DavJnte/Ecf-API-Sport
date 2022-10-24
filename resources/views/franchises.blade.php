@@ -27,34 +27,44 @@
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Nom</th>
-                  <th>Email</th>
-                  <th>Token</th>
-                  <th>Statut</th>
-                  <th>Permissions</th>
-                  <th>Actions</th>
+                <a href="/addFranchise/" type="button" id="ajout" class="btn btn-primary" style="width:100px;">Ajouter</a>
+                <tr style="text-align:center;">
+                  <th>Nom :</th>
+                  <th>Email :</th>
+                  <th>Token :</th>
+                  <th>Statut :</th>
+                  <th>Permissions :</th>
+                  <th>Actions :</th>
                 </tr>
                 </thead>
                 <tbody>
                     @foreach ($franchises as $key=>$franchise)
                         <tr>
-                            <td>{{ $key+1 }}</td>
-                            <td>{{ $franchise->name }}</td>
-                            <td>{{ $franchise->email }}</td>
-                            <td>{{ $franchise->token }}</td>
-                            <td>{{ ($franchise->verified) ? 'Vérifiée' : 'Non vérifiée' }}</td>
+                            <td style="text-align:center ;">{{ $franchise->name }}</td>
+                            <td style="text-align:center ;">{{ $franchise->email }}</td>
+                            <td style="text-align:center ;">{{ $franchise->token }}</td>
+                            <td style="text-align:center ;">{{ ($franchise->verified) ? 'Vérifiée' : 'Non vérifiée' }}</td>
+                            <td style="text-align:center ;"> <?php if($franchise->deleted==0){
+                              echo'Activé';
+                            }
+                              else{echo 'Désactivé';} ?>
+                            </td>
                             <td>
                               <ul>    
                                   @foreach ($franchises_permissions[$franchise->id] as $permission)
-                                      <li>{{ $permission->nom.'( '.$permission->code.')' }}</li>
+                                      <li>{{ $permission->nom }}</li>
                                   @endforeach
                               </ul>
                             </td>
-                            <td align="center">
-                                <a class="m-1" href="/editFranchise/{{ $franchise->id }}"><i class="fa fa-pen"></i></a>
-                                <a class="m-1" onclick="return confirm('Supprimer cette franchise ?');" href="/deleteFranchise/{{ $franchise->id }}"><i class="text-danger fa fa-trash"></i></a>
+                            <td style="text-align:center">
+                            <?php if($franchise->deleted==0){ ?>
+                              <a onclick="return confirm('Etes-vous sûr de vouloir désactiver la Franchise ?');" href="/status_updatef/{{ $franchise->id }}" type="button" class="btn btn-info">Désactiver</a>
+                           <?php }
+                              else{?> 
+                              <a onclick="return confirm('Etes-vous sûr de vouloir réactiver la Franchise ?');" href="/status_updatef/{{ $franchise->id }}" type="button" class="btn btn-light">Réactiver</a> 
+                            <?php }?>
+                            <a href="/editFranchise/{{ $franchise->id }}" type="button" class="btn btn-warning">Modifier</a>
+                            <a class="btn btn-danger" onclick="return confirm('Supprimer cette franchise ?');" href="/deleteFranchise/{{ $franchise->id }}">Supprimer</a>
                             </td>
                         </tr>
                     @endforeach

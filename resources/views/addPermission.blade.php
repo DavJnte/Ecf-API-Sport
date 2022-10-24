@@ -32,12 +32,8 @@
           </div>
           <div class="card-body">
             <div class="form-group">
-              <label for="inputName">*Nom :</label>
+              <label for="inputName">* Nom de la permission :</label>
               <input type="text" id="nom" class="form-control">
-            </div>
-            <div class="form-group">
-              <label for="inputName">*Page : *</label>
-              <input type="text" id="code" class="form-control">
             </div>
             <div class="row">
                 <div class="col-12">
@@ -64,9 +60,8 @@
 
     function save()
     {
-        if ($('#nom').val() != '' && $('#code').val() != '') {
+        if ($('#nom').val() != '') {
             var nom = $('#nom').val();
-            var code = $('#code').val();
 
             $('#btnSubmit').html('Veuiller patienter <i class="fa fa-spinner fa-spin"></i>');
             $.ajax({
@@ -74,7 +69,6 @@
                 type: "POST",
                 data: {
                   nom:nom,
-                  code:code
                 },
                 success: function(msg) {
                     console.log(msg);
@@ -91,7 +85,7 @@
                 }
             });
         } else {
-            toastr.error('Tous les champs avec * sont requis');
+            toastr.error('Le Champ Nom est obligatoire');
         }
     }
 </script>  

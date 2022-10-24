@@ -33,7 +33,7 @@
           <div class="card-body">
             <input type="hidden" name="id" id="id" value="{{ $structure->id }}">
             <div class="form-group">
-                <label for="inputName">Franchise *</label>
+                <label for="inputName">*Franchise :</label>
                 <select name="structure" class="form-control" id="parent">
                     @foreach($franchises as $franchise)
                         <option {{ ($franchise->id == $structure->parent) ? 'selected' : ''  }} value="{{ $franchise->id }}">{{ $franchise->name }}</option>
@@ -41,19 +41,19 @@
                 </select>
             </div>
             <div class="form-group">
-              <label for="inputName">Nom *</label>
+              <label for="inputName">*Nom :</label>
               <input type="text" value="{{ $structure->name }}" id="name" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">Email *</label>
+              <label for="inputName">*Email :</label>
               <input type="email" value="{{ $structure->email }}" id="email" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">Password *</label>
+              <label for="inputName">*Password :</label>
               <input type="password" id="password" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">Token *</label>
+              <label for="inputName">*Token :</label>
               <input type="text" value="{{ $structure->token }}" id="token" class="form-control">
             </div>
             <div class="row">

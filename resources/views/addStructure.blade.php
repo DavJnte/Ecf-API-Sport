@@ -34,7 +34,7 @@
           <div class="card-body">
             
             <div class="form-group">
-              <label for="inputName">Franchise *</label>
+              <label for="inputName">*Franchise :</label>
               <select name="permissions" class="form-control" id="parent">
                   @foreach($franchises as $franchise)
                       <option value="{{ $franchise->id }}">{{ $franchise->name }}</option>
@@ -42,19 +42,19 @@
               </select>
           </div>
             <div class="form-group">
-              <label for="inputName">Nom *</label>
+              <label for="inputName">*Nom :</label>
               <input type="text" id="name" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">Email *</label>
+              <label for="inputName">*Email :</label>
               <input type="email" id="email" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">Password *</label>
+              <label for="inputName">*Password :</label>
               <input type="password" id="password" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">Token *</label>
+              <label for="inputName">*Token :</label>
               <input type="text" id="token" class="form-control">
             </div>
             <div class="row">

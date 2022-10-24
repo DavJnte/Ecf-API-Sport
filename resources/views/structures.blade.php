@@ -27,36 +27,49 @@
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Franchise</th>
-                  <th>Nom</th>
-                  <th>Email</th>
-                  <th>Token</th>
-                  <th>Statut</th>
-                  <th>Permissions</th>
-                  <th>Actions</th>
+                <a href="/addStructure/" type="button" id="ajout" class="btn btn-primary" style="width:100px;">Ajouter</a>
+                <tr style="text-align:center;">
+                  <th>De la Franchise :</th>
+                  <th>Nom :</th>
+                  <th>Email :</th>
+                  <th>Token :</th>
+                  <th>Email Vérifié :</th>
+                  <th>Status :</th>
+                  <th>Permissions :</th>
+                  <th>Actions :</th>
                 </tr>
                 </thead>
                 <tbody>
                     @foreach ($structures as $key=>$structure)
                         <tr>
-                            <td>{{ $key+1 }}</td>
-                            <td>{{ $structure->parentName }}</td>
-                            <td>{{ $structure->name }}</td>
-                            <td>{{ $structure->email }}</td>
-                            <td>{{ $structure->token }}</td>
+                            <td style="text-align:center ;">{{ $structure->parentName }}</td>
+                            <td style="text-align:center ;">{{ $structure->name }}</td>
+                            <td style="text-align:center ;">{{ $structure->email }}</td>
+                            <td style="text-align:center ;">{{ $structure->token }}</td>
                             <td>{{ ($structure->verified) ? 'Vérifiée' : 'Non vérifiée' }}</td>
+                            <td style="text-align:center ;"> <?php if($structure->deleted==0){
+                              echo'Activé';
+                            }
+                              else{echo 'Désactivé';} ?>
+                            </td>
+            
                             <td>
                               <ul>    
                                   @foreach ($franchises_permissions[$structure->parentId] as $permission)
-                                      <li>{{ $permission->nom.'( '.$permission->code.')' }}</li>
+                                      <li>{{ $permission->nom }}</li>
                                   @endforeach
                               </ul>
                             </td>
-                            <td align="center">
-                                <a class="m-1" href="/editStructure/{{ $structure->id }}"><i class="fa fa-pen"></i></a>
-                                <a class="m-1" onclick="return confirm('Supprimer cette structure ?');" href="/deleteStructure/{{ $structure->id }}"><i class="text-danger fa fa-trash"></i></a>
+                            <td style="text-align:center">
+                            <?php if($structure->deleted==0){ ?>
+                              <a onclick="return confirm('Etes-vous sûr de vouloir désactiver la structure ?');" href="/status_update/{{ $structure->id }}" type="button" class="btn btn-info">Désactiver</a>
+                           <?php }
+                              else{?> 
+                              <a onclick="return confirm('Etes-vous sûr de vouloir réactiver la structure ?');" href="/status_update/{{ $structure->id }}" type="button" class="btn btn-light">Réactiver</a> 
+                            <?php }?>
+
+                            <a href="/editStructure/{{ $structure->id }}" type="button" class="btn btn-warning">Modifier</a>
+                            <a class="btn btn-danger" onclick="return confirm('Supprimer cette structure ?');" href="/deleteStructure/{{ $structure->id }}">Supprimer</a>
                             </td>
                         </tr>
                     @endforeach

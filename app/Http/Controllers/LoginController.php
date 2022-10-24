@@ -31,21 +31,24 @@ class LoginController extends Controller
                 if (Hash::check($pwd, $model->password, [])) {
                     session()->put('admin', $model);
                     session()->save();
-                    echo 'true||Authentification effectuee avec succes';
+                    echo 'true||Connexion effectuée!';
+                    exit;
+                }else{
+                    echo 'false||Identifants incorrects !';
                     exit;
                 }
-                echo 'false||Identifiants incorrects';
-                exit;
+                
             }
             echo 'false||Utilisateur inconnu';
             exit;
         } else {
             $model = User::where('email', $email)->first();
+            $deleted = User::where('deleted');
             if ($model != null) {
-                if (Hash::check($pwd, $model->password, [])) {
+                if (Hash::check($pwd, $model->password, [] && $deleted ==0)) {
                     session()->put('user', $model);
                     session()->save();
-                    echo 'true||Connexion effectuee avec succes';
+                    echo 'true||Connexion effectuée !';
                     exit;
                 }
                 echo 'false||Identifiants incorrects';

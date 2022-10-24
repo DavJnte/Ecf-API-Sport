@@ -38,11 +38,6 @@
               <label for="inputName">*Nom :</label>
               <input type="text" value="{{ $permission->nom }}" id="nom" class="form-control">
             </div>
-            <div class="form-group">
-              <label for="inputDescription">*Page :</label>
-              <input type="text" value="{{ $permission->code }}" id="code" class="form-control">
-            </div>
-
             <div class="row">
               <div class="col-12">
                 <button id="btnSubmit" onclick="save()" class="btn btn-success float-left">Enregistrer</button>
@@ -67,7 +62,7 @@
   });
 
   function save() {
-    if ($('#nom').val() != '' && $('#code').val() != '') {
+    if ($('#nom').val() != '') {
       var nom = $('#nom').val();
       var code = $('#code').val();
       $('#btnSubmit').html('Veuiller patienter <i class="fa fa-spinner fa-spin"></i>');
@@ -77,7 +72,6 @@
         data: {
           id: $('#id').val(),
           nom: nom,
-          code: code
         },
         success: function(msg) {
           console.log(msg);
