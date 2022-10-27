@@ -269,7 +269,13 @@
 <body class="container-fluid">
   <div class="container-fluid row justify-content-center no-margin pl-5 pr-5 mt-5 full-mt">
     <main class="col-md-12 login-form p-5">
-      <h4 class="login-title gotham text-black-bold">Bonjour Structure : {{session()->get('user')->name}} <span class="text-lemon"> <?php if ($users_parent) { ?>Franchise : <?php echo $users_parent[0]->name;} ?></span></h4>
+      <h4 class="login-title gotham text-black-bold"> Bonjour : {{session()->get('user')->name}} 
+        <span class="text-lemon">
+          <?php if ($users_parent) { ?>
+           <br> Franchise : <?php echo $users_parent[0]->name;
+          } ?>
+          </span>
+        </h4>
       <a class="float-right mb-3" href="/logout"><i class="fa fa-power-off"></i> Deconnexion</a>
       <br>
       <hr>

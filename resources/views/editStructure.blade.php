@@ -53,6 +53,10 @@
               <input type="password" id="password" class="form-control">
             </div>
             <div class="form-group">
+              <label for="inputName">*Adresse Postal :</label>
+              <input type="text" value="{{ $structure->adresse }}" id="adresse" class="form-control">
+            </div>
+            <div class="form-group">
               <label for="inputName">*Token :</label>
               <input type="text" value="{{ $structure->token }}" id="token" class="form-control">
             </div>
@@ -81,10 +85,11 @@
 
     function save()
     {
-      if ($('#nom').val() != '' && $('#email').val() != ''  && $('#token').val() != '' && $('#parent').val() != '') {
+      if ($('#nom').val() != '' && $('#email').val() != ''  && $('#token').val() != '' && $('#adresse').val() != ''  && $('#parent').val() != '') {
             var name = $('#name').val();
             var email = $('#email').val();
             var password = $('#password').val();
+            var adresse = $('#adresse').val();
             var token = $('#token').val();
             var parent = $('#parent').val();
 
@@ -97,6 +102,7 @@
                   name:name,
                     email:email,
                     password:password,
+                    adresse:adresse,
                     token:token,
                     parent:parent
                 },

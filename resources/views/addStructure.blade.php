@@ -50,8 +50,12 @@
               <input type="email" id="email" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">*Password :</label>
+              <label for="inputName">*Mot de passe :</label>
               <input type="password" id="password" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputName">*Adresse postal :</label>
+              <input type="adresse" id="adresse" class="form-control">
             </div>
             <div class="form-group">
               <label for="inputName">*Token :</label>
@@ -86,10 +90,11 @@
 
     function save()
     {
-        if ($('#nom').val() != '' && $('#email').val() != ''  && $('#password').val() != ''  && $('#token').val() != '' && $('#parent').val() != '') {
+        if ($('#nom').val() != '' && $('#email').val() != ''  && $('#password').val() != ''  && $('#adresse').val() != '' && $('#token').val() != '' && $('#parent').val() != '') {
             var name = $('#name').val();
             var email = $('#email').val();
             var password = $('#password').val();
+            var adresse = $('#adresse').val();
             var token = $('#token').val();
             var parent = $('#parent').val();
 
@@ -98,9 +103,10 @@
                 url: "/saveStructureAjax",
                 type: "POST",
                 data: {
-                  name:name,
+                    name:name,
                     email:email,
                     password:password,
+                    adresse:adresse,
                     token:token,
                     parent:parent
                 },

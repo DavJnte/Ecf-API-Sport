@@ -28,11 +28,14 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <a href="/addStructure/" type="button" id="ajout" class="btn btn-primary" style="width:100px;">Ajouter</a>
+
+                  <!-- La barre de recherche devrait etre ici -->
+
                 <tr style="text-align:center;">
                   <th>De la Franchise :</th>
                   <th>Nom :</th>
                   <th>Email :</th>
-                  <th>Token :</th>
+                  <th>Adresse :</th>
                   <th>Email Vérifié :</th>
                   <th>Status :</th>
                   <th>Permissions :</th>
@@ -45,7 +48,7 @@
                             <td style="text-align:center ;">{{ $structure->parentName }}</td>
                             <td style="text-align:center ;">{{ $structure->name }}</td>
                             <td style="text-align:center ;">{{ $structure->email }}</td>
-                            <td style="text-align:center ;">{{ $structure->token }}</td>
+                            <td style="text-align:center ;">{{ $structure->adresse }}</td>
                             <td>{{ ($structure->verified) ? 'Vérifiée' : 'Non vérifiée' }}</td>
                             <td style="text-align:center ;"> <?php if($structure->deleted==0){
                               echo'Activé';

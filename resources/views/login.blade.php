@@ -21,7 +21,7 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Renseigner vos identifiants pour acceder à votre compte</p>
+      <p class="login-box-msg">Renseigner vos identifiants</p>
 
       <form>
         <div class="input-group mb-3">
@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input id="password" type="password" class="form-control" placeholder="Password">
+          <input id="password" type="password" class="form-control" placeholder="Mot de passe">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -61,8 +61,53 @@
 <!-- jQuery -->
 <script src="{{ asset('plugins/jquery/jquery.min.js') }}"></script>
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="{{ asset('js/script.js') }}"></script>
 <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 </body>
 </html>
+<script> 
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+    function login()
+    {
+        if ($('#email').val() != '' && $('#password').val() != '') {
+            var email = $('#email').val();
+            var password = $('#password').val();
+
+            $('#btnSubmit').html('Veuiller patienter <i class="fa fa-spinner fa-spin"></i>');
+            $.ajax({
+                url: "/loginAjax",
+                type: "POST",
+                data: {
+                    email: email,
+                    password: password
+                },
+                success: function(msg) {
+                    console.log(msg);
+                    var val = msg.split("||");
+                    if (val[0] == "true") {
+                        $('#btnSubmit').html('Connexion établie');
+                        toastr.success(val[1]);
+                        setTimeout(() => {
+                            location.href = '/home-user';
+                        }, 600);
+                    } else if (val[0] == "false") {
+                        toastr.error(val[1]);
+                        $('#btnSubmit').html('Se connecter');
+                    }
+                }
+            });
+        } else if ($('#username').val() != '') {
+          toastr.error('Veuillez saisir le Mot de passe');
+
+        }
+        else if ($('#password').val() != '') {
+          toastr.error('Veuillez saisir le Nom Administrateur');
+
+        }else{
+          toastr.error('Veuillez remplir les champs');
+        }
+    }</script>

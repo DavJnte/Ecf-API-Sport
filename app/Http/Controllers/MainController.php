@@ -11,12 +11,13 @@ use Illuminate\Support\Facades\Hash;
 
 class MainController extends Controller
 {
-    //retour au Menu
+    //Menu de l'admin
     function home()
     {
         return view('home');
     }
 
+    //Menu de l'utilisateur
     function homeUser()
     {
         if (isset(session()->get('user')->parent)) {
@@ -54,7 +55,7 @@ class MainController extends Controller
         die;
     }
 
-    //Modifier vue
+    //Modifier vue Permission
     function editPermission(Permission $permission)
     {
         return view('editPermission', compact('permission'));
@@ -77,7 +78,10 @@ class MainController extends Controller
     {
         $permission->delete();
         if($permission){
+            DB::table('users')->where('id',$permission)->delete($permission);
             echo 'true||Operation effectuée avec succès';
+        }else{
+            echo "false||Une erreur s'est produite";
         }
         return back();
     }
@@ -107,7 +111,7 @@ class MainController extends Controller
     //Création d'une structure
     function saveStructureAjax()
     {
-        if (User::create(['name' => request('name'), 'email' => request('email'), 'token' => request('token'), 'role' => 3, 'password' => Hash::make(request('password')), 'parent' => request('parent')])) {
+        if (User::create(['name' => request('name'), 'email' => request('email'),'adresse' => request('adresse'), 'token' => request('token'), 'role' => 3, 'password' => Hash::make(request('password')), 'parent' => request('parent')])) {
             echo 'true||Structure créé avec succès';
             die;
         }
@@ -129,8 +133,7 @@ class MainController extends Controller
 
     //Modifier une Fanchise
     function updateFranchiseAjax()
-    {
-        
+    { 
         $franchise = User::find(request('id'));
         $deleting_perm = DB::delete('DELETE from user_permissions where user = ?',[request('id')]);
         if($deleting_perm){
@@ -138,30 +141,26 @@ class MainController extends Controller
             foreach ($permissions as $key => $value) {
                 if (!UserPermission::create(['user' => request('id'), 'permission' => $value]))
                     echo 'false||Une erreur s\est produite';
-            }
-                
+            }        
             if (request('password'))
-            $data = ['email' => request('email'), 'token' => request('token'), 'role' => 2, 'password' => Hash::make(request('password')), 'parent' => request('parent')];
+            $data = ['name' => request('name'),'email' => request('email'),'adresse' => request('adresse'), 'token' => request('token'), 'role' => 2, 'password' => Hash::make(request('password')), 'parent' => request('parent')];
             else
-                $data = ['email' => request('email'), 'token' => request('token'), 'role' => 2, 'parent' => request('parent')];
+                $data = ['name' => request('name'),'email' => request('email'),'adresse' => request('adresse'), 'token' => request('token'), 'role' => 2, 'parent' => request('parent')];
             if ($franchise->update($data)) {
                 echo 'true||Mise à jour effectuée';
-                die;
             }
         } else {
             $permissions = request('permissions');
             foreach ($permissions as $key => $value) {
                 if (!UserPermission::create(['user' => request('id'), 'permission' => $value]))
                     echo 'false||Une erreur s\est produite';
-            }
-                
+            }               
             if (request('password'))
-            $data = ['email' => request('email'), 'token' => request('token'), 'role' => 2, 'password' => Hash::make(request('password')), 'parent' => request('parent')];
+            $data = ['email' => request('email'),'adresse' => request('adresse'), 'token' => request('token'), 'role' => 2, 'password' => Hash::make(request('password')), 'parent' => request('parent')];
             else
-                $data = ['email' => request('email'), 'token' => request('token'), 'role' => 2, 'parent' => request('parent')];
+                $data = ['email' => request('email'),'adresse' => request('adresse'), 'token' => request('token'), 'role' => 2, 'parent' => request('parent')];
             if ($franchise->update($data)) {
                 echo 'true||Mise à jour effectuée';
-                die;
             }
         } 
     }
@@ -200,9 +199,9 @@ class MainController extends Controller
     {
         $structure = User::find(request('id'));
         if (request('password'))
-            $data = ['email' => request('email'), 'token' => request('token'), 'role' => 3, 'password' => Hash::make(request('password')), 'parent' => request('parent')];
+            $data = ['name' => request('name'),'email' => request('email'), 'adresse' => request('adresse'), 'token' => request('token'), 'role' => 3, 'password' => Hash::make(request('password')), 'parent' => request('parent')];
         else
-            $data = ['email' => request('email'), 'token' => request('token'), 'role' => 3, 'parent' => request('parent')];
+            $data = ['name' => request('name'),'email' => request('email'), 'adresse' => request('adresse'), 'token' => request('token'), 'role' => 3, 'parent' => request('parent')];
         if ($structure->update($data)) {
             echo 'true||Mise à jour effectuée';
             die;
@@ -236,8 +235,11 @@ class MainController extends Controller
     function deleteStructure(User $structure)
     {
         $structure->delete();
+        DB::table('users')->where('id',$structure)->delete($structure);
         if($structure){
             echo 'true||Operation effectuée avec succès';
+        }else{
+            echo "false||Une erreur s'est produite";
         }
         return back();
     }
@@ -266,7 +268,7 @@ class MainController extends Controller
     //Ajout d'une Franchise
     function saveFranchiseAjax()
     {
-        if ($user = User::create(['name' => request('name'), 'email' => request('email'), 'token' => request('token'), 'role' => 2, 'password' => Hash::make(request('password'))])) {
+        if ($user = User::create(['name' => request('name'), 'email' => request('email'), 'adresse' => request('adresse'), 'token' => request('token'), 'role' => 2, 'password' => Hash::make(request('password'))])) {
             $permissions = request('permissions');
             foreach ($permissions as $key => $value) {
                 if (!UserPermission::create(['user' => $user->id, 'permission' => $value]))
@@ -284,7 +286,10 @@ class MainController extends Controller
     {
         $franchise->delete();
         if($franchise){
+            DB::table('users')->where('id',$franchise)->delete($franchise);
             echo 'true||Operation effectuée avec succès';
+        }else{
+            echo "false||Une erreur s'est produite";
         }
         return back();
     }
@@ -293,7 +298,7 @@ class MainController extends Controller
     function logout()
     {
         session()->forget('admin');
-        session()->save();
+        
         return redirect('/');
     }
 }

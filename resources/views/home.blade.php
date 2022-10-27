@@ -13,12 +13,6 @@
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->
-      <br>
-          <h1>Bonjour,</h1>
-          <p>Madness Fitness est une plateforme de gestion d'aministration de Franchise et de salle de sport.
-          <br>Vous disposez d'un menu avec plusieurs options.
-          <br>Pour plus de renseignement veuillez consulter la notice d'utilisation de l'application ci-dessous.
-          </p>
     </div><!-- /.container-fluid -->
   </div>
  

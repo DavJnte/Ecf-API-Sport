@@ -41,7 +41,11 @@
               <input type="email" value="{{ $franchise->email }}" id="email" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">*Mot de passe *</label>
+              <label for="inputName">*Adresse :</label>
+              <input type="text" value="{{ $franchise->adresse }}" id="adresse" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="inputName">*Mot de passe :</label>
               <input type="password" id="password" class="form-control">
             </div>
             <div class="form-group">
@@ -97,10 +101,11 @@
 
     function save()
     {
-      if ($('#nom').val() != '' && $('#email').val() != ''  && $('#token').val() != '' && $('#permissions').val() != '') {
+      if ($('#nom').val() != '' && $('#email').val() != ''  && $('#adresse').val() != ''  && $('#token').val() != '' && $('#permissions').val() != '') {
             var name = $('#name').val();
             var email = $('#email').val();
             var password = $('#password').val();
+            var adresse = $('#adresse').val();
             var permissions = $('#permissions').val();
             var token = $('#token').val(); 
 
@@ -112,6 +117,7 @@
                   id:$('#id').val(),
                   name:name,
                     email:email,
+                    adresse:adresse,
                     password:password,
                     token:token,
                     permissions:permissions

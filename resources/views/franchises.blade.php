@@ -31,7 +31,8 @@
                 <tr style="text-align:center;">
                   <th>Nom :</th>
                   <th>Email :</th>
-                  <th>Token :</th>
+                  <th>Adresse :</th>
+                  <th>Email Vérifié :</th>
                   <th>Statut :</th>
                   <th>Permissions :</th>
                   <th>Actions :</th>
@@ -42,7 +43,7 @@
                         <tr>
                             <td style="text-align:center ;">{{ $franchise->name }}</td>
                             <td style="text-align:center ;">{{ $franchise->email }}</td>
-                            <td style="text-align:center ;">{{ $franchise->token }}</td>
+                            <td style="text-align:center ;">{{ $franchise->adresse }}</td>
                             <td style="text-align:center ;">{{ ($franchise->verified) ? 'Vérifiée' : 'Non vérifiée' }}</td>
                             <td style="text-align:center ;"> <?php if($franchise->deleted==0){
                               echo'Activé';
