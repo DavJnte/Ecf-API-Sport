@@ -29,8 +29,6 @@
                 <thead>
                 <a href="/addStructure/" type="button" id="ajout" class="btn btn-primary" style="width:100px;">Ajouter</a>
 
-                  <!-- La barre de recherche devrait etre ici -->
-
                 <tr style="text-align:center;">
                   <th>De la Franchise :</th>
                   <th>Nom :</th>

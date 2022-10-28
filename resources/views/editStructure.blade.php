@@ -49,7 +49,7 @@
               <input type="email" value="{{ $structure->email }}" id="email" class="form-control">
             </div>
             <div class="form-group">
-              <label for="inputName">*Password :</label>
+              <label for="inputName">*Mot de passe :</label>
               <input type="password" id="password" class="form-control">
             </div>
             <div class="form-group">

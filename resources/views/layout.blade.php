@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Madness Fitness/Admin</title>
-
+  <meta name="Description" content="Administration de gestion de création de salle de sport." />
   <meta name="csrf-token" content="{{ csrf_token() }}" />
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,14 +16,10 @@
   <link rel="stylesheet" href="{{ asset('plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
   <!-- iCheck -->
   <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css')}}">
-  <!-- JQVMap -->
-  <link rel="stylesheet" href="{{ asset('plugins/jqvmap/jqvmap.min.css')}}">
   <!-- Theme style -->
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css')}}">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="{{ asset('plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
-  <!-- Daterange picker -->
-  <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css')}}">
   <!-- summernote -->
   <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css')}}">
   
@@ -34,11 +30,6 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <script src="https://kit.fontawesome.com/637d7774d7.js" crossorigin="anonymous"></script>
   <style>
-        @font-face {
-            font-family: Bozart;
-            src: url('{{ asset("fonts/BOZART.ttf") }}') format('truetype');
-        }
-        
         @font-face {
             font-family: Dosis;
             src: url('{{ asset("fonts/Dosis-VariableFont_wght.ttf") }}') format('truetype');
@@ -126,8 +117,8 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
+          
+        <!--  Ajout des icone avec la librairie font awesome  -->
             <li class="nav-item">
                 <a href="/home" class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
@@ -199,8 +190,6 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
-  <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     
     @yield('content')
@@ -219,20 +208,13 @@
 <script src="{{ asset('plugins/jquery/jquery.min.js')}}"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="{{ asset('plugins/jquery-ui/jquery-ui.min.js')}}"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<!-- Résoudre le conflit entre l'infobulle de jQuery UI et l'infobulle de Bootstrap -->
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset('plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-<!-- ChartJS -->
-<script src="{{ asset('plugins/chart.js/Chart.min.js')}}"></script>
-<!-- Sparkline -->
-<script src="{{ asset('plugins/sparklines/sparkline.js')}}"></script>
-<!-- JQVMap -->
-<script src="{{ asset('plugins/jqvmap/jquery.vmap.min.js')}}"></script>
-<script src="{{ asset('plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
 <!-- jQuery Knob Chart -->
 <script src="{{ asset('plugins/jquery-knob/jquery.knob.min.js')}}"></script>
 <!-- daterangepicker -->
@@ -246,9 +228,9 @@
 <script src="{{ asset('plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('dist/js/adminlte.js')}}"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="{{ asset('dist/js/demo.js')}}"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+
+<!-- Dashbord Admin -->
 <script src="{{ asset('dist/js/pages/dashboard.js')}}"></script>
 <script src="{{ asset('plugins/datatables/jquery.dataTables.min.js')}}"></script><!--ici -->
 <script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
@@ -262,6 +244,8 @@
 <script src="{{ asset('plugins/datatables-buttons/js/buttons.html5.min.js')}}"></script>
 <script src="{{ asset('plugins/datatables-buttons/js/buttons.print.min.js')}}"></script>
 <script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js')}}"></script>
+
+<!--Information du menu -->
 <script>
     $(function () {
       $("#example1").DataTable({

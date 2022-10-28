@@ -1,9 +1,4 @@
 @font-face {
-    font-family: Bozart;
-    src: url('{{ asset("fonts/BOZART.ttf") }}') format('truetype');
-}
-
-@font-face {
     font-family: Dosis;
     src: url('{{ asset("fonts/Dosis-VariableFont_wght.ttf") }}') format('truetype');
 }
@@ -18,4 +13,255 @@ body {
 
 .text-bigger {
     font-size: 5rem!important;
+}
+
+
+@font-face {
+  font-family: Main;
+  src: url('fonts/main.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Gotham;
+  src: url('fonts/GothamBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Gotham_Light;
+  src: url('fonts/GothamLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Gotham_Book;
+  src: url('fonts/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Gothic;
+  src: url('fonts/GOTHIC.TTF') format('truetype');
+}
+
+@font-face {
+  font-family: Gotham_Light;
+  src: url('fonts/GothamLight.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Cocogoose;
+  src: url('fonts/Cocogoose_trial.otf');
+}
+
+.gotham-book {
+  font-family: Gotham_Book;
+}
+
+.gotham {
+  font-family: Gotham_Light;
+}
+
+.bg-lemon {
+  background-color: #a8cf38;
+}
+
+.text-lemon {
+  color: #a8cf38;
+}
+
+a.top:hover {
+  color: white !important;
+}
+
+.bg-light {
+  background-color: white !important;
+}
+
+.text-black-bold {
+  color: black !important;
+  font-weight: bold !important
+}
+
+.text-white-bold {
+  color: white !important;
+  font-weight: bold !important
+}
+
+.btn-lemon {
+  border: 2px solid white;
+  /* border-radius: 10px!important; */
+  padding: 8px 20px 8px 20px ! important;
+  width: 200px
+}
+
+.btn-lemon-full {
+  border: 2px solid transparent;
+  /* border-radius: 10px!important; */
+  padding: 8px 20px 8px 20px ! important;
+  background-color: #a8cf38;
+  color: white;
+}
+
+.btn-white-full {
+  border: 1px solid black;
+  border-radius: 10px !important;
+  padding: 8px 20px 8px 20px ! important;
+  background-color: white;
+  color: black;
+}
+
+.lang.dropdown-menu.show {
+  margin-top: 2rem;
+  border: 1px solid black;
+  border-radius: 10px !important;
+  background-color: white;
+  color: black;
+}
+
+.group.dropdown-menu.show {
+  margin-top: 2rem;
+  border: 1px solid black;
+  border-radius: 10px !important;
+  background-color: white;
+  color: black;
+}
+
+.owl-nav {
+  display: none;
+}
+
+.owl-dots {
+  display: none;
+}
+
+.no-margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.text-lemon {
+  color: #a8cf38;
+}
+
+.bg-green {
+  background-color: #24A85A;
+}
+
+.text-lemon-bold {
+  color: #a8cf38;
+  font-weight: bold;
+}
+
+.bg-maron {
+  background-color: rgb(245, 240, 240);
+}
+
+.no-underline {
+  text-decoration: none !important;
+}
+
+.float-msg {
+  display: flex;
+  background-color: white;
+  color: #a8cf38;
+  border: 1px solid white;
+  border-radius: 1rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+  padding: 0 1rem 0rem 1rem;
+  z-index: 99;
+  font-weight: bold;
+  box-shadow: 0rem 0.1rem 0.5rem 0.2rem #6c757d29;
+}
+
+.breath {
+  padding: 0rem 3rem 0rem 3rem;
+}
+
+.bg-gray {
+  background-color: rgb(255, 249, 249);
+}
+
+.zoom-effect {
+  transform: scale(1);
+}
+
+.zoom-effect:hover {
+  color: white;
+  text-align: center;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.img-zoom {
+  transform: scale(1);
+}
+
+.img-zoom:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.header {
+  font-size: 2.5rem !important;
+  font-weight: bolder;
+}
+
+.nav-fixed {
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 99;
+}
+
+.tcb-input {
+  height: 3.5rem;
+  background-color: rgb(255, 249, 249);
+  border-radius: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+  font-family: 'Gotham_Light';
+}
+
+#send {
+  border-radius: 1rem;
+  padding: 1rem 2.5rem 1rem 2.5rem !important;
+  transform: scale(1);
+}
+
+#send:hover {
+  color: white;
+  /* transform: scale(1.5); */
+  cursor: pointer;
+}
+
+.shadow {
+  box-shadow: 0rem 0.5rem 0.1rem 0rem #6c757d29;
+}
+
+.login-form {
+  background-color: white;
+  box-shadow: 0rem 0.1rem 0.5rem 0.2rem #6c757d29;
+}
+
+.tcb-login-input {
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  font-family: 'Gotham_Light';
+  box-shadow: 0rem 0.1rem 0.5rem 0.2rem #6c757d29;
+}
+
+#tcb-login-btn {
+  font-family: 'Gotham_Light';
+  box-shadow: 0rem 0.1rem 0.5rem 0.2rem #6c757d29;
+}
+
+.full-mt {
+  margin-top: 8rem !important
+}
+
+.new-breath {
+  padding-left: 10rem !important;
+  padding-right: 10rem !important;
+}
+
+.new-breath-top {
+  padding-left: 10rem !important;
+  padding-right: 8rem !important;
 }
