@@ -62,7 +62,6 @@
     {
         if ($('#nom').val() != '') {
             var nom = $('#nom').val();
-
             $('#btnSubmit').html('Veuiller patienter <i class="fa fa-spinner fa-spin"></i>');
             $.ajax({
                 url: "/savePermissionAjax",
