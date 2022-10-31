@@ -1,9 +1,12 @@
 # ECF API Salle De SPORT 2022
 
 ###### Développé par: `Jeannette David` Graduate Développeur web Full Stack
-> ### Lien du projet en ligne :
-> :arrow_right: Présentation du projet : 
+> ### Lien du projet en ligne : 
+> :arrow_right: Présentation du projet : <br>
 
+#### Identifiants de l'application (Administrateur) : 
+- Login : admin
+- Mot de passe : 123456789
 ---
 # :memo: Les Compétences de l'examen :
 
@@ -48,7 +51,7 @@ Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent 
 
 
 
-# :robot_face:  Les Technologies Utilisés : 
+#  Les Technologies Utilisés : 
 
 ### - Les Langages utilisés :<br>
 -PHP -HTML -CSS -JAVASCRIPT 
@@ -151,7 +154,8 @@ Pour finir votre installation en local veuillez ouvrir à nouveau votre terminal
 ```
 
 - Vous voici arriver devant l'interface de connexion : 
-
+### Connexion Pour les Franchises ou Structures :
+![connexion](https://user-images.githubusercontent.com/74544250/199036674-043c1f9c-0d11-47e7-9fb4-cecba119aa82.png) <br> 
 
 <b>Ou</b>
 
@@ -162,8 +166,23 @@ Pour finir votre installation en local veuillez ouvrir à nouveau votre terminal
 ```
 
 ---
-# :paperclip: Les Annexes :
+# :linked_paperclips:  Les Annexes : 
+## MCD (Model Conceptuel de Données) :
+![mcd](https://user-images.githubusercontent.com/74544250/199040048-201c89ba-74cc-4a03-81ce-086040502a43.png)
+
+## MLD (Méthode Merise): 
+![image alt](https://user-images.githubusercontent.com/74544250/199057007-d33c2449-8e3b-4c5f-8bc5-6f9d4a4e57c2.png)
+
+## MPD :
+![image alt](https://user-images.githubusercontent.com/74544250/199059143-e5070e34-6de7-469a-9985-783440a134bc.png)
+
+## Diagramme de Cas d'utilisation : 
+![Uml](https://user-images.githubusercontent.com/74544250/199040078-26c738bd-19d9-41ad-b2fe-92a506d731b4.png)
+
+## Diagramme de Classe : 
+![Diagramme](https://user-images.githubusercontent.com/74544250/199040224-6f0c8c9b-5a5a-458e-9a89-acf3d5af801a.png)
+
+## Diagramme de Séquence : 
 
 
 ---
-
