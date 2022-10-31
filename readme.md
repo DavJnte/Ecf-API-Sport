@@ -1,10 +1,11 @@
 # ECF API Salle De SPORT 2022
 
-###### Développé par: `Jeannette David`
- 
+###### Développé par: `Jeannette David` Graduate Développeur web Full Stack
+> ### Lien du projet en ligne :
 > :arrow_right: Présentation du projet : 
+
 ---
-# :memo: Compétences de l'examen :
+# :memo: Les Compétences de l'examen :
 
 
 ### Activité – Type 1 : Développer la partie front-end d’une application web ou web mobile en intégrant les recommandations de sécurité
@@ -24,19 +25,30 @@
 - Élaborer et mettre en œuvre des composants dans une application de gestion de contenu ou e-commerce.
 ---
 
-# :bookmark_tabs:   Application  : 
-### -Description :
+# :bookmark_tabs: L'Application  : 
+### -Résumer :
 
-L’application est une grande marque de salle de sport qui souhaite la création d’une 
-interface simple à destination de ses équipes qui gèrent les droits d'accès à ses 
-applications web de ses franchisés et partenaires qui possèdent des salles de sport.
-L’interface sera utilisée par l’équipe technique de développement de la marque
+L’application est une grande marque de salle de sport qui souhaite la création d’une
+Interface simple à destination de ses équipes qui gèrent les droits d'accès à ses
+Franchisés qui possèdent des salles de sport.
+L’interface sera utilisée par l’équipe technique de développement de la marque.
+### -Description : 
+<b>L'application</b> Madness Fitness dispose de 3 rôles distinct : <br>
+- Un Administrateur
+- Des Franchises
+- Des Structures <br>
 
+Ces rôles possèdent des accès différents à la plateforme.En effet, L'administrateur est celui qui gère l'ensemble des utilisateurs qui possèdent des permissions. L'admin peut entre autres ajouter, modifier, supprimer, activer et désactiver ce qu'il veut ( Que ce soit des Franchises ou Structures)il peut aussi ajouter, modifier et supprimer des permissions.
+Les permissions sont en fait des droits que l'admin peut accorder à ses utilisateurs. Celui-ci peut en effet attribuer des droits pour chaque Franchise qui seront hérité par l'essemble des structures qui lui appartienne .<br>
+- <b>Point essentiel</b> : si jamais l'admin décide de supprimer une Franchise celle-ci enclenchera avec elle la suppression de toutes ces salles de sport et de ses permissions.Tout simplement car elles sont liées entre elles. À l'inverse si l'admin décide de supprimer une Structure alors celle-ci n'impactera pas les autres salles ni la Franchise elle-même, car les Structures sont indépendantes.Les Structures sont juste lié à une Franchise parent qui leur accorde des permissions.
+
+Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent se connecter sur la plateforme. Seulement il n'y a que l'admin qui à le droit de gérer l'ensemble de l'application. Les utilisateurs, lorsqu'il se connecte, ont uniquement le droit de voir leurs permissions.
+ 
 ---
 
 
 
-# Analyses et Choix techniques : 
+# :robot_face:  Les Technologies Utilisés : 
 
 ### - Les Langages utilisés :<br>
 -PHP -HTML -CSS -JAVASCRIPT 
@@ -52,7 +64,7 @@ DataTable
 
 ---
 
-# :closed_lock_with_key: Sécurité  : 
+# :closed_lock_with_key: La Sécurité  : 
 L'application possède une multitude d'option de sécurté :+1: <br>
 Celle-ci comprends,une protection contre les :<br>
 - <b>Injection SQL</b>
@@ -133,18 +145,25 @@ Pour finir votre installation en local veuillez ouvrir à nouveau votre terminal
 >php artisan config:cache
 ```
 # Démarer l'application dans votre navigateur : :rocket: 
-- Ouvrez votre terminal avec votre éditeur de code et effectuer la commande :
-:arrow_right: <b>php artisan serve</b> 
+- Ouvrez votre terminal avec votre éditeur de code et effectuer la commande : 
+```javascript
+>php artisan serve
+```
+
 - Vous voici arriver devant l'interface de connexion : 
-image ....
+
 
 <b>Ou</b>
 
 - Ouvrez votre terminal avec la commande <b>Windows+S</b> dirigez vous sur le projet avec la commande <b>cd</b> pour arriver sur le dossier de l'application dans votre serveur local.
 - Effectuer la commande :
-:arrow_right: <b>php artisan serve</b> 
+```javascript
+>php artisan serve
+```
 
 ---
-# :paperclip: Annexes :
-à Venir...
+# :paperclip: Les Annexes :
+
+
+---
 
