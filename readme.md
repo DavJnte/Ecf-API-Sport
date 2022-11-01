@@ -1,7 +1,7 @@
 # ECF API Salle De SPORT 2022
 
 ###### Développé par: `Jeannette David` Graduate Développeur web Full Stack
-> ### Lien du projet en ligne : 
+> ### Lien du projet en ligne : https://madnessfitness.fr
 > :arrow_right: Présentation du projet : <br>
 
 #### Identifiants de l'application (Administrateur) : 
@@ -50,20 +50,23 @@ Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent 
 ---
 
 
-
 #  Les Technologies Utilisés : 
 
-### - Les Langages utilisés :<br>
--PHP -HTML -CSS -JAVASCRIPT 
+### Technologie Front-end : 
+- PHP, HTML, CSS, JAVASCRIPT 
 
+### Technologie Back-end : 
+- IDE DATAGRIP -> Pour écrire mes reqêtes SQL 
+- Server MY SQL (Phpmyadmin)
 ### - Framework : 
-LARAVEL , Boostrap , Ionic , Summernote, ADMINLTE
+- LARAVEL, Boostrap, Ionic, Summernote, ADMINLTE
 
 ### - Librairie :
-JQuery , Font Awesome , IchekBootstrap , Overlayscrollbars
+- JQuery, Font Awesome, Overlayscrollbars
 
 ### - Plugin : 
-DataTable
+- DataTable
+
 
 ---
 
@@ -79,6 +82,8 @@ L'appication web est également protégé vis à vis des formulaires vide. <b>De
 
 ### Utilisation des $session et Protection CSRF
 En effet le $session est utilisé dans l'appication afin de bien authentifier l'utilisateur. Afin de garentir l'aspect sécurté de connexion et d'utilisation une protection supplémentaire CSRF permettra à l'utilisateur de sécuriser ses actions et sa connexion sur son compte. Cela protège aussi contre une attaque de type « Man-In-The-Middle » qui est possible sous HTTPS lors de l’utilisation d’une valeur secrète indépendante de la session.
+
+- Passage à un protocole HTTPS pour sécuriser les données et l'application.
 
 ---
 # :computer:  Déploiment de l'application en Local
@@ -183,6 +188,16 @@ Pour finir votre installation en local veuillez ouvrir à nouveau votre terminal
 ![Diagramme](https://user-images.githubusercontent.com/74544250/199040224-6f0c8c9b-5a5a-458e-9a89-acf3d5af801a.png)
 
 ## Diagramme de Séquence : 
+
+## Charte Graphique : 
+![Wirefrmae2](https://user-images.githubusercontent.com/74544250/199218005-9fe384c5-55b7-4fc3-979d-b0a7165f7f22.png)
+
+
+## Wireframe : 
+
+![Wirefrmae1](https://user-images.githubusercontent.com/74544250/199217979-74eb25b2-d08e-4f48-bca8-0d119ced20c1.png)
+
+![Wirefrmae2](https://user-images.githubusercontent.com/74544250/199216689-f13ee23b-5422-4ef4-ae22-722f4da82c82.png)
 
 
 ---
