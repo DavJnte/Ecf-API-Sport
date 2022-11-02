@@ -56,7 +56,7 @@ Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent 
 - PHP, HTML, CSS, JAVASCRIPT 
 
 ### Technologie Back-end : 
-- IDE DATAGRIP -> Pour écrire mes reqêtes SQL 
+- IDE DATAGRIP -> Pour écrire mes requêtes SQL 
 - Server MY SQL (Phpmyadmin)
 ### - Framework : 
 - LARAVEL, Boostrap, Ionic, Summernote, ADMINLTE
@@ -171,7 +171,9 @@ Pour finir votre installation en local veuillez ouvrir à nouveau votre terminal
 ```
 
 ---
-# :linked_paperclips:  Les Annexes : 
+# :notebook_with_decorative_cover: Les Annexes : 
+
+### - La Maquette de l'application se trouve dans le dossier github
 ## MCD (Model Conceptuel de Données) :
 ![mcd](https://user-images.githubusercontent.com/74544250/199040048-201c89ba-74cc-4a03-81ce-086040502a43.png)
 
