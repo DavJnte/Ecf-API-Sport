@@ -53,7 +53,7 @@ Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent 
 #  Les Technologies Utilisés : 
 
 ### Technologie Front-end : 
-- PHP, HTML, CSS, JAVASCRIPT 
+- HTML, CSS, JAVASCRIPT 
 
 ### Technologie Back-end : 
 - IDE DATAGRIP -> Pour écrire mes requêtes SQL 
@@ -190,10 +190,17 @@ Pour finir votre installation en local veuillez ouvrir à nouveau votre terminal
 ![Diagramme](https://user-images.githubusercontent.com/74544250/199040224-6f0c8c9b-5a5a-458e-9a89-acf3d5af801a.png)
 
 ## Diagramme de Séquence : 
+### -ADMINISTRATEUR :
+![SEQUENCE 1](https://user-images.githubusercontent.com/74544250/199436135-4b53960d-886d-4e1b-8573-9260f971bee9.png)
+
+![SEQUENCE 2](https://user-images.githubusercontent.com/74544250/199436186-3a3e5dda-5cff-41e3-aabd-0e1c101e799c.png)
+
+### - Utilisateurs : 
+
+![SEQUENCE 3](https://user-images.githubusercontent.com/74544250/199440561-60eb62be-886d-4615-a6d3-64f8ba0fddfe.png)
 
 ## Charte Graphique : 
 ![Wirefrmae2](https://user-images.githubusercontent.com/74544250/199218005-9fe384c5-55b7-4fc3-979d-b0a7165f7f22.png)
-
 
 ## Wireframe : 
 
