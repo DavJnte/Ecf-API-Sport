@@ -53,7 +53,7 @@ Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent 
 #  Les Technologies Utilisés : 
 
 ### Technologie Front-end : 
-- PHP, HTML, CSS, JAVASCRIPT 
+- HTML, CSS, JAVASCRIPT 
 
 ### Technologie Back-end : 
 - IDE DATAGRIP -> Pour écrire mes requêtes SQL 
