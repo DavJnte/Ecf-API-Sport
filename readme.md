@@ -58,6 +58,7 @@ Par la suite, les utilisateurs que ce soit des Franchises ou Structures peuvent 
 ### Technologie Back-end : 
 - IDE DATAGRIP -> Pour écrire mes requêtes SQL 
 - Server MY SQL (Phpmyadmin)
+- PHP
 ### - Framework : 
 - LARAVEL, Boostrap, Ionic, Summernote, ADMINLTE
 
